@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <DebugType>portable</DebugType>
+    <TargetName>$(AssemblyName).net</TargetName>
+    <DefineConstants>SERVER</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CitizenFX.Core.Server" Version="1.0.*" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <Compile Include="../Shared/**/*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="..\Shared\Dummy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Modules\Licensing.cs~RF49b756.TMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>bin\Release\netstandard2.0\Microsoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlConnector">
+      <HintPath>..\dlls\MySqlConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\dlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>..\dlls\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>..\dlls\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

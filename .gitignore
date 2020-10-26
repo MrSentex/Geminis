@@ -1,0 +1,7 @@
+Server/bin
+Server/obj
+Client/bin
+Client/obj
+dist
+.vs
+fxmanifest.lua
