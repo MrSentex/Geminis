@@ -60,6 +60,7 @@ namespace Geminis.Server
             EventHandlers["geminis:set_client_config"] += new Action<Player>(config.OnClientRequest);
             EventHandlers["geminis:debug"] += new Action<Player, string>(OnDebug);
 
+            EventHandlers["geminis:on_player_connect"] += new Action<GeminisPlayer>(entities.OnPlayerConnecting);
             EventHandlers["entityCreating"] += new Action<int>(entities.OnEntityCreating);
         }
 

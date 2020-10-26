@@ -246,6 +246,7 @@ namespace Geminis.Server.Modules
             }
 
             deferreals.done();
+            BaseScript.TriggerEvent("geminis:on_player_connect", geminisPlayer);
         }
     
         public async void OnPlayerDropped([FromSource] Player source)

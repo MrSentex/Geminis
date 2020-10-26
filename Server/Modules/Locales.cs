@@ -29,6 +29,8 @@ namespace Geminis.Server.Modules
         public string stop_not_allowed { get; set; }
         public string unknown_resource { get; set; }
         public string modified_resource { get; set; }
+
+        public string entity_ratelimit { get; set; }
     }
 
     class Locales : InterconnectClient

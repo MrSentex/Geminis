@@ -37,24 +37,6 @@ namespace Geminis.Server.Modules
             return false;
         }
 
-        public string GetMacAddress()
-        {
-            foreach (NetworkInterface it in NetworkInterface.GetAllNetworkInterfaces())
-            {
-                if (it.OperationalStatus == OperationalStatus.Up)
-                {
-                    string description = it.Description;
-
-                    if (!description.Contains("VirtualBox") && !description.Contains("VMWare") && !description.Contains("VPN"))
-                    {
-                        return it.GetPhysicalAddress().ToString();
-                    }
-                }
-            }
-
-            return null;
-        }
-
         public string Format(string str, params string[] format)
         {
             for (int i = 0; i < format.Length; i++)
